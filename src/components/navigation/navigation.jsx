@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./navigation.scss";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,7 +25,9 @@ function Navigation() {
                 <a href="#">Product</a>
               </li>
               <li>
-                <a href="#">Cart</a>
+                <a href="#">
+                  <AddShoppingCartIcon />
+                </a>
               </li>
             </ul>
           </div>
