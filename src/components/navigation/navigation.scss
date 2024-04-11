@@ -18,6 +18,11 @@ $container-background-color: rgba(
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.cart-menu {
+  display: flex;
+  align-items: center;
+}
+
 .navigation__content {
   display: flex;
   align-items: center;
@@ -75,6 +80,9 @@ $container-background-color: rgba(
     width: 100%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+  }
+  .navigation__content {
+    justify-content: space-between;
   }
 
   .navigation__links.open {
