@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./navigation.css";
+import "./navigation.scss";
 
 function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
