@@ -1,8 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./navigation.scss";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,7 +22,9 @@ function Navigation() {
       <nav className="navigation">
         <div className="container">
           <div className="navigation__content">
-            <div className="navigation__logo">Your Logo</div>
+            <Link to="/" className="navigation__logo">
+              Your Logo
+            </Link>
 
             <div className="cart-menu">
               <div
@@ -31,16 +34,16 @@ function Navigation() {
               >
                 <ul>
                   <li>
-                    <a href="#">Categories</a>
+                    <Link to="/Categories">Categories</Link>
                   </li>
                   <li>
-                    <a href="#">Product</a>
+                    <Link to="/Product">Product</Link>
                   </li>
                 </ul>
               </div>
-              <div className={`cart ${cartOpen ? "open" : ""}`}>
+              <Link to="/cart" className={`cart ${cartOpen ? "open" : ""}`}>
                 <ShoppingCartIcon />
-              </div>
+              </Link>
             </div>
             <div
               className="navigation__mobile-toggle"
