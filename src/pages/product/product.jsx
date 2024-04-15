@@ -1,13 +1,21 @@
 import "./product.scss";
 import React from "react";
+import { PRODUCTS } from "../../products";
+import { Item } from "./item";
 
 function Product() {
   return (
-    <section>
-      <div>
-        <p></p>
+    <div className="product">
+      <div className="shopTitle">
+        {" "}
+        <h1>Furniture Shop</h1>
       </div>
-    </section>
+      <div className="products">
+        {PRODUCTS.map((product) => (
+          <Item data={product} />
+        ))}
+      </div>
+    </div>
   );
 }
 
